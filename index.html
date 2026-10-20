@@ -1,0 +1,309 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Kebijakan Privasi Kas Harian</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+  /* Layout: satu kolom dokumen ±68ch, header bermerek, sakelar bahasa ID/EN, panel ringkasan. */
+  :root {
+    --bg: #f7faf8;
+    --fg: #1a1f1c;
+    --muted: #5b6661;
+    --accent: #0b6e4f;
+    --accent-ink: #ffffff;
+    --surface: #ffffff;
+    --panel: #e3f2ea;
+    --line: #d9e4de;
+    --font: "Plus Jakarta Sans", "Segoe UI", Roboto, system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1512; --fg: #e6ede9; --muted: #9aa8a1; --accent: #6fd2a8; --accent-ink: #062b1f;
+      --surface: #161d19; --panel: #15271f; --line: #27332d; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1512; --fg: #e6ede9; --muted: #9aa8a1; --accent: #6fd2a8; --accent-ink: #062b1f;
+    --surface: #161d19; --panel: #15271f; --line: #27332d; color-scheme: dark;
+  }
+  body {
+    background: var(--bg); color: var(--fg); font-family: var(--font); font-size: 17px; line-height: 1.65;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 0 64px;
+  }
+  .wrap { max-width: 68ch; margin: 0 auto; }
+  header { display: flex; flex-direction: column; gap: 20px; padding-block: 40px 28px; border-bottom: 1px solid var(--line); }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .brand svg { width: 52px; height: 52px; border-radius: 14px; flex: none; }
+  .brand .name { font-weight: 700; font-size: 18px; letter-spacing: 0.01em; }
+  .brand .sub { color: var(--muted); font-size: 14px; }
+  h1 { font-size: clamp(28px, 5vw, 38px); line-height: 1.15; margin: 0; font-weight: 700; text-wrap: balance; letter-spacing: -0.01em; }
+  .meta { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; color: var(--muted); font-size: 14px; }
+  .lang { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; gap: 2px; background: var(--surface); }
+  .lang button { font: inherit; font-weight: 600; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; border: 0; background: transparent; color: var(--muted); padding: 6px 14px; border-radius: 999px; cursor: pointer; }
+  .lang button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+  .lang button:focus-visible, .copy:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .summary { background: var(--panel); border-radius: 18px; padding: 20px 22px; margin-block: 28px 8px; }
+  .summary h2 { margin: 0 0 10px; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+  .summary ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+  section > h2 { font-size: 21px; margin: 36px 0 10px; font-weight: 700; text-wrap: balance; }
+  p, li { margin: 0 0 12px; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  li::marker { color: var(--accent); }
+  .contact { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin-top: 8px; }
+  .contact code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 15px; user-select: all; }
+  .copy { font: inherit; font-size: 13px; font-weight: 600; border: 1px solid var(--line); background: transparent; color: var(--fg); padding: 6px 12px; border-radius: 999px; cursor: pointer; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  [lang-pane][hidden] { display: none; }
+  @media (prefers-reduced-motion: no-preference) { .lang button { transition: background .15s ease, color .15s ease; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <svg viewBox="18 18 72 72" role="img" aria-label="Logo Kas Harian">
+        <rect x="18" y="18" width="72" height="72" fill="#0B6E4F"/>
+        <path fill="#FFFFFF" d="M37,35 H71 A7,7 0 0 1 78,42 V66 A7,7 0 0 1 71,73 H37 A7,7 0 0 1 30,66 V42 A7,7 0 0 1 37,35 Z"/>
+        <path fill="#0B6E4F" d="M38,45 H58 A2.5,2.5 0 0 1 58,50 H38 A2.5,2.5 0 0 1 38,45 Z"/>
+        <path fill="#0B6E4F" d="M38,55 H52 A2.5,2.5 0 0 1 52,60 H38 A2.5,2.5 0 0 1 38,55 Z"/>
+        <circle cx="60" cy="66" r="11" fill="#F2C14E"/><circle cx="60" cy="66" r="6.5" fill="#0B6E4F"/><circle cx="60" cy="66" r="3" fill="#F2C14E"/>
+      </svg>
+      <div>
+        <div class="name">Kas Harian</div>
+        <div class="sub">Catatan pemasukan dan pengeluaran harian untuk Android</div>
+      </div>
+    </div>
+    <h1 id="title">Kebijakan Privasi Kas Harian</h1>
+    <div class="meta">
+      <span id="effective">Berlaku sejak 20 Oktober 2026 · Versi aplikasi 1.0.0</span>
+      <div class="lang" role="group" aria-label="Bahasa">
+        <button type="button" id="btn-id" aria-pressed="true">ID</button>
+        <button type="button" id="btn-en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <div lang-pane id="pane-id" lang="id">
+    <div class="summary">
+      <h2>Ringkasan</h2>
+      <ul>
+        <li>Kas Harian tidak mengumpulkan, mengirim, atau menjual data pribadi Anda.</li>
+        <li>Semua catatan keuangan tersimpan hanya di perangkat Anda.</li>
+        <li>Tidak ada iklan, tidak ada analitik, tidak ada akun.</li>
+      </ul>
+    </div>
+
+    <section>
+      <h2>1. Siapa yang bertanggung jawab</h2>
+      <p>Kas Harian dikembangkan dan diterbitkan secara perorangan oleh pengembang Kas Harian ("kami"). Kebijakan ini menjelaskan data apa yang dibuat oleh aplikasi, di mana data itu disimpan, dan apa yang dapat Anda lakukan terhadapnya.</p>
+    </section>
+
+    <section>
+      <h2>2. Data yang disimpan di perangkat Anda</h2>
+      <p>Saat Anda memakai aplikasi, data berikut dibuat dan disimpan di penyimpanan privat aplikasi di perangkat Anda:</p>
+      <ul>
+        <li>Buku kas: nama, warna, dan ikon.</li>
+        <li>Transaksi: jenis, nominal, tanggal dan waktu, kategori, metode pembayaran, dan catatan.</li>
+        <li>Kategori yang Anda buat sendiri.</li>
+        <li>Foto struk yang Anda lampirkan, disalin ke folder privat aplikasi.</li>
+        <li>Pengaturan: tema, mata uang, dan preferensi tampilan.</li>
+        <li>PIN kunci aplikasi, disimpan bukan sebagai teks melainkan sebagai hash dengan salt acak di penyimpanan aman Android (Keystore).</li>
+      </ul>
+      <p>Data ini tidak pernah dikirim kepada kami maupun pihak lain. Kami tidak mengoperasikan server dan tidak dapat melihat data Anda.</p>
+    </section>
+
+    <section>
+      <h2>3. Izin dan fitur perangkat</h2>
+      <ul>
+        <li><strong>Biometrik</strong> (izin USE_BIOMETRIC): hanya untuk membuka kunci aplikasi melalui dialog biometrik sistem Android. Aplikasi tidak pernah menerima data sidik jari atau wajah Anda; verifikasi dilakukan sepenuhnya oleh sistem.</li>
+        <li><strong>Kamera dan galeri</strong>: foto struk diambil lewat aplikasi kamera bawaan atau pemilih foto Android. Kas Harian tidak meminta izin kamera maupun akses ke seluruh galeri; hanya foto yang Anda pilih yang disalin.</li>
+        <li><strong>Internet</strong>: aplikasi tidak memerlukan dan tidak menggunakan koneksi internet.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Berbagi dan ekspor atas perintah Anda</h2>
+      <p>Berkas laporan (PDF, Excel, CSV) dan berkas cadangan (JSON) dibuat hanya saat Anda menekan <em>Bagikan</em> atau <em>Simpan ke perangkat</em>. Berkas tersebut diserahkan ke aplikasi atau lokasi yang Anda pilih, misalnya WhatsApp, Gmail, Google Drive, atau folder Unduhan. Setelah itu, berkas tunduk pada kebijakan privasi layanan yang Anda pilih.</p>
+    </section>
+
+    <section>
+      <h2>5. Cadangan sistem Android</h2>
+      <p>Jika fitur Cadangan Google aktif di perangkat Anda, sistem Android dapat mencadangkan basis data dan pengaturan Kas Harian ke akun Google Anda bersama data aplikasi lain. Cadangan ini dienkripsi dan dikelola oleh Google, bukan oleh kami; foto struk dan PIN tidak disertakan. Anda dapat mematikannya di Pengaturan Android → Google → Cadangan.</p>
+    </section>
+
+    <section>
+      <h2>6. Pihak ketiga</h2>
+      <p>Kas Harian tidak memuat SDK iklan, analitik, pelacakan, maupun pelaporan kerusakan. Pustaka sumber terbuka yang dipakai (Flutter, SQLite, dan lainnya) berjalan sepenuhnya di perangkat dan tidak mengirim data.</p>
+    </section>
+
+    <section>
+      <h2>7. Keamanan</h2>
+      <p>Data disimpan di area privat aplikasi yang dilindungi sandbox Android dan tidak dapat diakses aplikasi lain. Kunci PIN dan biometrik menambah lapisan perlindungan di dalam aplikasi, tetapi perlindungan terbaik tetap bergantung pada kunci layar perangkat Anda. Kami menyarankan mengaktifkan kunci layar dan enkripsi perangkat.</p>
+    </section>
+
+    <section>
+      <h2>8. Menghapus data Anda</h2>
+      <ul>
+        <li>Hapus transaksi, buku, atau kategori langsung di dalam aplikasi.</li>
+        <li>Pulihkan cadangan dengan opsi <em>Ganti semua</em> untuk mengganti seluruh data.</li>
+        <li>Hapus semua data sekaligus melalui Pengaturan Android → Aplikasi → Kas Harian → Hapus data, atau dengan mencopot pemasangan aplikasi.</li>
+      </ul>
+      <p>Berkas ekspor yang Anda simpan sendiri dan cadangan Google yang dikelola akun Anda perlu dihapus secara terpisah.</p>
+    </section>
+
+    <section>
+      <h2>9. Anak-anak</h2>
+      <p>Kas Harian tidak ditujukan untuk anak di bawah 13 tahun dan tidak mengumpulkan data dari siapa pun, termasuk anak-anak.</p>
+    </section>
+
+    <section>
+      <h2>10. Perubahan kebijakan</h2>
+      <p>Bila kebijakan ini berubah, versi terbaru akan dipublikasikan di halaman ini dengan tanggal berlaku yang baru. Perubahan yang berarti juga dicantumkan dalam catatan rilis aplikasi.</p>
+    </section>
+
+    <section>
+      <h2>11. Hubungi kami</h2>
+      <p>Pertanyaan tentang kebijakan ini atau data Anda dapat dikirim ke alamat berikut.</p>
+      <div class="contact"><code>hadisaputra55@gmail.com</code><button type="button" class="copy" data-copy="hadisaputra55@gmail.com">Salin alamat</button></div>
+    </section>
+  </div>
+
+  <div lang-pane id="pane-en" lang="en" hidden>
+    <div class="summary">
+      <h2>Summary</h2>
+      <ul>
+        <li>Kas Harian does not collect, transmit, or sell your personal data.</li>
+        <li>All of your financial records stay on your device.</li>
+        <li>No ads, no analytics, no account.</li>
+      </ul>
+    </div>
+
+    <section>
+      <h2>1. Who is responsible</h2>
+      <p>Kas Harian is developed and published by its individual developer ("we"). This policy explains what data the app creates, where it is stored, and what you can do with it.</p>
+    </section>
+
+    <section>
+      <h2>2. Data stored on your device</h2>
+      <p>When you use the app, the following data is created and stored in the app's private storage on your device:</p>
+      <ul>
+        <li>Cash books: name, color, and icon.</li>
+        <li>Transactions: type, amount, date and time, category, payment method, and note.</li>
+        <li>Categories you create.</li>
+        <li>Receipt photos you attach, copied into the app's private folder.</li>
+        <li>Settings: theme, currency, and display preferences.</li>
+        <li>The app-lock PIN, stored not as text but as a salted hash in Android's secure storage (Keystore).</li>
+      </ul>
+      <p>This data is never sent to us or to anyone else. We operate no servers and cannot see your data.</p>
+    </section>
+
+    <section>
+      <h2>3. Permissions and device features</h2>
+      <ul>
+        <li><strong>Biometrics</strong> (USE_BIOMETRIC permission): used only to unlock the app through the Android system biometric dialog. The app never receives your fingerprint or face data; verification is handled entirely by the system.</li>
+        <li><strong>Camera and gallery</strong>: receipt photos are taken with the device's camera app or chosen through the Android photo picker. Kas Harian does not request camera permission or access to your whole gallery; only the photo you pick is copied.</li>
+        <li><strong>Internet</strong>: the app does not need and does not use an internet connection.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Sharing and export on your request</h2>
+      <p>Report files (PDF, Excel, CSV) and backup files (JSON) are created only when you tap <em>Share</em> or <em>Save to device</em>. They are handed to the app or location you choose, such as WhatsApp, Gmail, Google Drive, or your Downloads folder. From that point on, the file is governed by the privacy policy of the service you chose.</p>
+    </section>
+
+    <section>
+      <h2>5. Android system backup</h2>
+      <p>If Google Backup is enabled on your device, Android may back up the Kas Harian database and settings to your Google account along with other app data. That backup is encrypted and managed by Google, not by us; receipt photos and the PIN are excluded. You can turn it off in Android Settings → Google → Backup.</p>
+    </section>
+
+    <section>
+      <h2>6. Third parties</h2>
+      <p>Kas Harian contains no advertising, analytics, tracking, or crash-reporting SDKs. The open-source libraries it uses (Flutter, SQLite, and others) run entirely on the device and send no data.</p>
+    </section>
+
+    <section>
+      <h2>7. Security</h2>
+      <p>Data lives in the app's private area protected by the Android sandbox and cannot be read by other apps. The PIN and biometric lock add a layer of protection inside the app, but your strongest protection remains your device's screen lock. We recommend enabling a screen lock and device encryption.</p>
+    </section>
+
+    <section>
+      <h2>8. Deleting your data</h2>
+      <ul>
+        <li>Delete transactions, books, or categories inside the app.</li>
+        <li>Restore a backup with the <em>Replace all</em> option to replace everything.</li>
+        <li>Delete all data at once via Android Settings → Apps → Kas Harian → Clear data, or by uninstalling the app.</li>
+      </ul>
+      <p>Export files you saved yourself and Google backups managed by your account must be deleted separately.</p>
+    </section>
+
+    <section>
+      <h2>9. Children</h2>
+      <p>Kas Harian is not directed at children under 13 and does not collect data from anyone, including children.</p>
+    </section>
+
+    <section>
+      <h2>10. Changes to this policy</h2>
+      <p>If this policy changes, the latest version will be published on this page with a new effective date. Meaningful changes are also listed in the app's release notes.</p>
+    </section>
+
+    <section>
+      <h2>11. Contact</h2>
+      <p>Questions about this policy or your data can be sent to the address below.</p>
+      <div class="contact"><code>hadisaputra55@gmail.com</code><button type="button" class="copy" data-copy="hadisaputra55@gmail.com">Copy address</button></div>
+    </section>
+  </div>
+
+  <footer>
+    <span id="foot-id">Kas Harian · Kebijakan privasi · Pembaruan terakhir 20 Oktober 2026</span>
+    <span id="foot-en" hidden>Kas Harian · Privacy policy · Last updated 20 October 2026</span>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var btnId = document.getElementById('btn-id');
+    var btnEn = document.getElementById('btn-en');
+    var paneId = document.getElementById('pane-id');
+    var paneEn = document.getElementById('pane-en');
+    var title = document.getElementById('title');
+    var eff = document.getElementById('effective');
+    var footId = document.getElementById('foot-id');
+    var footEn = document.getElementById('foot-en');
+
+    function setLang(lang) {
+      var en = lang === 'en';
+      paneId.hidden = en; paneEn.hidden = !en;
+      footId.hidden = en; footEn.hidden = !en;
+      btnId.setAttribute('aria-pressed', String(!en));
+      btnEn.setAttribute('aria-pressed', String(en));
+      title.textContent = en ? 'Kas Harian Privacy Policy' : 'Kebijakan Privasi Kas Harian';
+      eff.textContent = en ? 'Effective 20 October 2026 · App version 1.0.0' : 'Berlaku sejak 20 Oktober 2026 · Versi aplikasi 1.0.0';
+      document.documentElement.lang = en ? 'en' : 'id';
+      try { localStorage.setItem('kh-privacy-lang', lang); } catch (e) {}
+    }
+    btnId.addEventListener('click', function () { setLang('id'); });
+    btnEn.addEventListener('click', function () { setLang('en'); });
+
+    var initial = 'id';
+    if (location.hash === '#en') { initial = 'en'; }
+    else { try { initial = localStorage.getItem('kh-privacy-lang') || 'id'; } catch (e) {} }
+    setLang(initial);
+
+    Array.prototype.forEach.call(document.querySelectorAll('.copy'), function (btn) {
+      btn.addEventListener('click', function () {
+        var text = btn.getAttribute('data-copy');
+        var done = function () { var old = btn.textContent; btn.textContent = document.documentElement.lang === 'en' ? 'Copied' : 'Tersalin'; setTimeout(function () { btn.textContent = old; }, 1500); };
+        var fallback = function () {
+          var code = btn.parentNode.querySelector('code');
+          var range = document.createRange(); range.selectNodeContents(code);
+          var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, fallback);
+        } else { fallback(); }
+      });
+    });
+  })();
+</script>
+
+</body></html>
